@@ -30,6 +30,7 @@ class LBFMNavigationController: UINavigationController {
     }
 
 }
+
 extension LBFMNavigationController{
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if children.count > 0 {
@@ -37,4 +38,10 @@ extension LBFMNavigationController{
         }
         super.pushViewController(viewController, animated: animated)
     }
+    
+    override func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
+        return true;
+    }
+    
+    
 }
